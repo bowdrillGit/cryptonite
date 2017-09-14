@@ -17,7 +17,7 @@
 # Copyright (c) 2012, Christoph Schmidt-Hieber
 
 CRYSTAX=""
-TOOLCHAIN=${HOME}/android-toolchain${CRYSTAX}
+TOOLCHAIN=${ANDROID_HOME}/android-toolchain${CRYSTAX}
 SYSROOT=${TOOLCHAIN}/sysroot
 MYAR=${TOOLCHAIN}/bin/arm-linux-androideabi-ar
 MYRANLIB=${TOOLCHAIN}/bin/arm-linux-androideabi-ranlib

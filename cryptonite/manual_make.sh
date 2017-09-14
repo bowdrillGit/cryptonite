@@ -8,7 +8,7 @@ rm -rf obj
 ./cplibs-static.py
 
 ARCH=armeabi
-NDK=${HOME}/android-ndk-r7
+NDK=${ANDROID_HOME}/android-ndk-r7
 HOSTOS=`uname -s`
 case ${HOSTOS} in
 'Darwin')

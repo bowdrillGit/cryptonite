@@ -1,6 +1,6 @@
 #! /bin/bash
 
-TOOLCHAIN="${HOME}/android-toolchain"
+TOOLCHAIN="${ANDROID_HOME}/android-toolchain"
 AR="${TOOLCHAIN}/bin/arm-linux-androideabi-ar crs"
 RANLIB="${TOOLCHAIN}/bin/arm-linux-androideabi-ranlib"
 STRIP="${TOOLCHAIN}/bin/arm-linux-androideabi-strip"

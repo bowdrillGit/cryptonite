@@ -13,7 +13,7 @@ fi
 
 if [ ! -f v1.7.5.tar.gz ]
 then
-    wget https://github.com/vgough/encfs/archive/v1.7.5.tar.gz
+    wget -c  https://github.com/vgough/encfs/archive/v1.7.5.tar.gz
 fi
 
 rm -rf encfs-1.7.5

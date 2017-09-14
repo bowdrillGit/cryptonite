@@ -1,6 +1,6 @@
 #! /bin/bash
 
-TOOLCHAIN=${HOME}/android-toolchain
+TOOLCHAIN=${ANDROID_HOME}/android-toolchain
 MYSTRIP=${TOOLCHAIN}/bin/arm-linux-androideabi-strip
 
 cd encfs-1.7.4

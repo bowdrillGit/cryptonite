@@ -20,7 +20,7 @@ TINYXML_USE_STL := YES
 #****************************************************************************
 
 
-TOOLCHAIN := ${HOME}/android-toolchain
+TOOLCHAIN := ${ANDROID_HOME}/android-toolchain
 SYSROOT   := ${TOOLCHAIN}/sysroot
 LIBSTDCXXINC := -I${TOOLCHAIN}/arm-linux-androideabi/include/c++/4.6 -I${TOOLCHAIN}/arm-linux-androideabi/include/c++/4.6/arm-linux-androideabi
 LIBSTDCXXLIB := -lstdc++

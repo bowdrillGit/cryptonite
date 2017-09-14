@@ -347,7 +347,7 @@ translation percentage of at least 50%.
      vorbis-tools       |                         []                         |
      wastesedge         |                                  ()                |
      wdiff              |                      []       [] []        []      |
-     wget               |                      [] []       []                |
+     wget -c                |                      [] []       []                |
      xchat              |             [] []    [] []       [] []     []      |
      xkeyboard-config   |                []                                  |
      xpad               |                []             []           []      |
@@ -516,7 +516,7 @@ translation percentage of at least 50%.
      vorbis-tools       |                                                  |
      wastesedge         |                ()                                |
      wdiff              | [] []          []  [] []             [] []    [] |
-     wget               |    []       [] []  []             [] [] []    [] |
+     wget -c                |    []       [] []  []             [] [] []    [] |
      xchat              | []          [] []        []    []    []       [] |
      xkeyboard-config   | []          [] []                    []          |
      xpad               | []                 []                []          |
@@ -685,7 +685,7 @@ translation percentage of at least 50%.
      vorbis-tools       |                                                  |
      wastesedge         |                                           []     |
      wdiff              |                               []    []           |
-     wget               | []                                        []     |
+     wget -c                | []                                        []     |
      xchat              | []    []                []                []     |
      xkeyboard-config   |    [] []                                  []     |
      xpad               |       []                      []          []     |
@@ -854,7 +854,7 @@ translation percentage of at least 50%.
      vorbis-tools       |                         []                       |
      wastesedge         |                                                  |
      wdiff              |       []     []      [] []    [] []       []     |
-     wget               |          []             []    []          []     |
+     wget -c                |          []             []    []          []     |
      xchat              |    []                   []    [] [] [] [] []     |
      xkeyboard-config   |                               [] []       []     |
      xpad               |                               [] []       []     |
@@ -1023,7 +1023,7 @@ translation percentage of at least 50%.
      vorbis-tools       |             []     []                             |  4
      wastesedge         |                                                   |  1
      wdiff              |          []        []                             | 23
-     wget               |          []        []                     []      | 20
+     wget -c                |          []        []                     []      | 20
      xchat              |             []     []         []          []      | 29
      xkeyboard-config   |          [] []     []                             | 14
      xpad               |                    []         []          []      | 15

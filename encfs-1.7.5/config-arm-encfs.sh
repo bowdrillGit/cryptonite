@@ -16,7 +16,7 @@
 
 # Copyright (c) 2012, Christoph Schmidt-Hieber
 
-TOOLCHAIN=${HOME}/android-toolchain
+TOOLCHAIN=${ANDROID_HOME}/android-toolchain
 FUSEDIR=`pwd`/../../fuse28
 OPENSSLDIR=`pwd`/../../openssl/openssl-1.0.0q
 BOOSTDIR=`pwd`/../../boost/boost_1_46_1

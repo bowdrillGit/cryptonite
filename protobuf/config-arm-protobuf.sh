@@ -16,7 +16,7 @@
 
 # Copyright (c) 2012, Christoph Schmidt-Hieber
 
-TOOLCHAIN=${HOME}/android-toolchain
+TOOLCHAIN=${ANDROID_HOME}/android-toolchain
 SYSROOT=${TOOLCHAIN}/sysroot
 MYAR=${TOOLCHAIN}/bin/arm-linux-androideabi-ar
 MYRANLIB=${TOOLCHAIN}/bin/arm-linux-androideabi-ranlib

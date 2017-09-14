@@ -7,7 +7,7 @@ fi
 
 if [ ! -f encfs-1.7.4.tgz ]
 then
-    wget http://encfs.googlecode.com/files/encfs-1.7.4.tgz
+    wget -c  http://encfs.googlecode.com/files/encfs-1.7.4.tgz
 fi
 
 rm -rf encfs-1.7.4
