@@ -1,5 +1,8 @@
 # Cryptonite
 
+# This is a personal fork of cryptonite in an effort to get new builds working
+# It is currently WIP
+
 ## Introduction
 
 Cryptonite brings [EncFS](http://www.arg0.net/encfs EncFS) and [TrueCrypt](http://www.truecrypt.org/) to Android. You can browse, export and open EncFS-encrypted directories and files on your Dropbox and on your phone. On rooted phones that support [FUSE](http://fuse.sourceforge.net/) (e.g. [CyanogenMod](http://www.cyanogenmod.com/)) you can also mount EncFS and TrueCrypt volumes. TrueCrypt is only available as a command-line version at this time.
