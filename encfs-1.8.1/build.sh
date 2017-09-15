@@ -13,7 +13,7 @@ cd encfs
 mkdir -p build-aux
 touch build-aux/config.rpath
 touch build-aux/ltmain.sh
-AUTOMAKE="automake --add-missing" autoreconf --force
+AUTOMAKE="automake --add-missing" autoreconf -if
 ${GLIBTOOLIZE}
 rm -rf armeabi-v7a
 ./config-arm-encfs.sh 1

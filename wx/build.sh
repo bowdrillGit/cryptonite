@@ -6,6 +6,6 @@ BUILDDIR=wxWidgets-${WXVER}/bld
 rm -rf ${BUILDDIR}
 mkdir -p ${BUILDDIR}
 cd ${BUILDDIR}
-../../config-arm-wx.sh
+../../config-arm-wx.sh 1
 make -j4
 make install
