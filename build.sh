@@ -2,7 +2,7 @@
 
 PROJECT_HOME=`pwd`
 ANDROID_HOME=`pwd`/../.
-ANDROID_SDK_TOOLS=/home/nate/.Android/Sdk/tools/bin
+ANDROID_SDK=~/.Android
 . env.sh
 
 LOG=$PROJECT_HOME/logbuild.log
@@ -14,9 +14,12 @@ cd $PROJECT_HOME
 # rm $LOG
 # rm -rf ${ANDROID_HOME}/android-ndk-r10e
 # rm -rf ${ANDROID_HOME}/android-toolchain
+# rm -rf {ANDROID_HOME}tools
 # rm -rf ${PROJECT_HOME}/openssl/openssl-1.0.2f
 # rm -rf ${PROJECT_HOME]/boost_1_60_0
 # rm -rf ${PROJECT_HOME}/wx/wxWidgets-2.8.12/
+# rm -rf ${PROJECT_HOME}/dropbox-android-sdk-1.6.3.zip
+# rm -rf ${PROJECT_HOME/ActionBarSherlock
 #
 # cd ${ANDROID_HOME}
 # echo 'Getting Android ndk r10'
@@ -67,10 +70,10 @@ PATH=$PATH:$PROJECT_HOME/bin
 # ./jni-build.sh
 #
 
-# cd ${PROJECT_HOME}
-# wget -c https://api.github.com/repos/JakeWharton/ActionBarSherlock/tarball/4.4.0
-# tar -xvf 4.4.0
-# mv JakeWharton-ActionBarSherlock-5a15d92/ ActionBarSherlock/
+cd ${PROJECT_HOME}
+wget -c https://api.github.com/repos/JakeWharton/ActionBarSherlock/tarball/4.3.1
+tar -xvf 4.3.1
+mv JakeWharton-ActionBarSherlock-071a61c ActionBarSherlock/
 
 
 #
@@ -85,7 +88,26 @@ PATH=$PATH:$PROJECT_HOME/bin
 # ./insert_key.sh
 #
 
+echo 'Getting dropbox'
+wget -c https://www.dropbox.com/developers/downloads/sdks/core/android/dropbox-android-sdk-1.6.3.zip
+uz dropbox-android-sdk-1.6.3.zip
+
+cp ${PROJECT_HOME}dropbox-android-sdk-1.6.3/lib/dropbox-android-sdk-1.6.3.jar $PROJECT_HOME/cryptonite/libs/
+cp ${PROJECT_HOME}dropbox-android-sdk-1.6.3/lib/test/httpmime-4.0.3.jar $PROJECT_HOME/cryptonite/libs/
+
 echo 'Updating packages'
-$ANDROID_SDK_TOOLS/sdkmanager --update --verbose
+# $ANDROID_SDK/Sdk/tools/bin/sdkmanager --update --verbose
+
+
+echo 'Get deprecated android tools'
+cd $ANDROID_HOME
+wget -c https://dl.google.com/android/repository/tools_r25.2.3-linux.zip
+uz tools_r25.2.3-linux.zip
+
+cd $PROJECT_HOME/cryptonite
+$ANDROID_HOME/tools/android sdk
+$ANDROID_HOME/tools/android update project --target android-21 --path . -s
+ant debug
+
 
 
