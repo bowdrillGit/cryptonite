@@ -11,10 +11,11 @@ if 'linux' in sys.platform:
 else:
     platform = 'darwin'
 
-toolchain = "%s/android-toolchain" % os.getenv("HOME")
+toolchain = "%s/android-toolchain" % os.getenv("ANDROID_HOME")
 openssl_version = "1.0.2f"
 encfs_version = "1.8.1"
 boost_version = "1_60_0"
+fuse_version = "293"
 
 def cpfile(src, target):
     sys.stdout.write("Copying %s to %s\n" % (src, target))
@@ -23,7 +24,7 @@ def cpfile(src, target):
 archs = ["armeabi-v7a"]
 
 if encfs_version != "svn":
-    encfs_dir = "encfs-%s/encfs-%s" % (encfs_version, encfs_version)
+    encfs_dir = "encfs-%s/encfs" % encfs_version
 else:
     encfs_dir = "encfs-svn"
 
@@ -41,12 +42,12 @@ for arch in archs:
     else:
         cpfile("../protobuf/protobuf-2.4.1/%s/lib/libprotobuf.a" % arch, target_dir)
         cpfile("../tinyxml/tinyxml/%s/libtinyxml.a" % arch, target_dir)
-    cpfile("../fuse28/obj/local/%s/libfuse.a" % arch, target_dir)
+    cpfile("../fuse%s/obj/local/%s/libfuse.a" % (fuse_version, arch), target_dir)
     cpfile("../rlog/rlog-1.4/%s/lib/librlog.a" % arch, target_dir)
     cpfile("../%s/%s/lib/libencfs.a" % (encfs_dir, arch), target_dir)
     cpfile("../openssl/openssl-%s/%s/libssl.a" % (openssl_version, arch), target_dir)
     cpfile("../openssl/openssl-%s/%s/libcrypto.a" % (openssl_version, arch), target_dir)
-    if arch=="armeabi":
+    if arch == "armeabi":
         arch_subdir = ""
     elif arch == "armeabi-v7a":
         arch_subdir = "armv7-a/"
@@ -63,12 +64,12 @@ except os.error:
 # Split into 1M chunks for Android <= 2.2:
 
 # truecrypt
-p = subprocess.Popen("/usr/bin/split -b 1m truecrypt truecrypt.split", 
-                     cwd="../tc/truecrypt-7.1a-source/Main", 
-                     shell=True)
-p.wait()
-
-splitfiles = glob.glob("../tc/truecrypt-7.1a-source/Main/truecrypt.split*")
-print(splitfiles)
-for splitfile in splitfiles:
-    cpfile(splitfile, "./assets/%s/" % arch)
+# p = subprocess.Popen("/usr/bin/split -b 1m truecrypt truecrypt.split",
+#                      cwd="../tc/truecrypt-7.1a-source/Main",
+#                      shell=True)
+# p.wait()
+#
+# splitfiles = glob.glob("../tc/truecrypt-7.1a-source/Main/truecrypt.split*")
+# print(splitfiles)
+# for splitfile in splitfiles:
+#     cpfile(splitfile, "./assets/%s/" % arch)

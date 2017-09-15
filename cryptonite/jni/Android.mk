@@ -31,16 +31,16 @@ ifeq ($(ENCFS_VERSION), svn)
     ENCFS_LDLIBS   := ./obj/local/$(TARGET_ARCH_ABI)/libprotobuf.a \
                       ./obj/local/$(TARGET_ARCH_ABI)/libtinyxml.a
 else
-    ENCFS_PATH  := encfs-$(ENCFS_VERSION)/encfs-$(ENCFS_VERSION)
+    ENCFS_PATH  := encfs-$(ENCFS_VERSION)/encfs
     ENCFS_INCLUDES := ../boost/boost_1_60_0
     ENCFS_CPPFLAGS := -DBOOST_FILESYSTEM_VERSION=2 -std=gnu++11
     ENCFS_LDLIBS   := ./obj/local/armeabi/libboost_serialization.a
 endif
 
 LOCAL_C_INCLUDES := \
-    ../encfs-$(ENCFS_VERSION)/encfs-$(ENCFS_VERSION) \
-    ../encfs-$(ENCFS_VERSION)/encfs-$(ENCFS_VERSION)/encfs \
-    ../encfs-$(ENCFS_VERSION)/encfs-$(ENCFS_VERSION)/intl \
+    ../encfs-$(ENCFS_VERSION)/encfs \
+    ../encfs-$(ENCFS_VERSION)/encfs/encfs \
+    ../encfs-$(ENCFS_VERSION)/encfs/intl \
     ../fuse293/jni/include \
     ../rlog/rlog-1.4/$(TARGET_ARCH_ABI)/include \
     ../openssl/openssl-1.0.2f/include \
@@ -59,7 +59,7 @@ LOCAL_CPPFLAGS := \
     -frtti \
     $(ENCFS_CPPFLAGS)
 
-LOCAL_LDLIBS := \
+LOCAL_SHARED_LIBRARIES := \
     ./obj/local/$(TARGET_ARCH_ABI)/libencfs.a \
     ./obj/local/$(TARGET_ARCH_ABI)/libfuse.a \
     ./obj/local/$(TARGET_ARCH_ABI)/librlog.a \
