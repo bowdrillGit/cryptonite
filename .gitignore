@@ -86,8 +86,7 @@ tinyxml/tinyxml*
 encfs-1.7.4/encfs-1*
 encfs-1.7.5/encfs-1*
 encfs-1.7.5/*.tar.gz
-encfs-1.8.1/encfs
-encfs-1.8.1/encfs/*
+encfs-1.8.1/encfs*
 encfs-1.8.1/*.tar.gz
 
 # encfs svn build
