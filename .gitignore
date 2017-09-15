@@ -86,7 +86,6 @@ tinyxml/tinyxml*
 encfs-1.7.4/encfs-1*
 encfs-1.7.5/encfs-1*
 encfs-1.7.5/*.tar.gz
-encfs-1.8.1/encfs*
 encfs-1.8.1/*.tar.gz
 
 # encfs svn build
@@ -131,6 +130,12 @@ wx/wxWidgets*
 # ActionBarSherlock
 ActionBarSherlock/*
 4.4.0
+4.3.1
+
+# Drop box
+dropbox-android-sdk-1.6.3.zip
+dropbox-android-sdk-1.6.3/*
+
 
 # build output directories
 
